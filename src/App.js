@@ -20,6 +20,12 @@ function App() {
         {id: 8, name: "Paula", grado: "4"},
         {id: 9, name: "Rosio", grado: "6"},
         {id: 10, name: "Marco", grado: "6"},
+        {id: 11, name: "Juan", grado: "3"},
+        {id: 12, name: "Mirely", grado: "3"},
+        {id: 13, name: "Karen", grado: "2"},
+        {id: 14, name: "Fany", grado: "5"},
+        {id: 15, name: "Uriel", grado: "5"},
+        {id: 16, name: "Fabian", grado: "2"},
       ];
 
       setAlumnos(response);

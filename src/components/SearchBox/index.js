@@ -11,7 +11,7 @@ const SearchBox = ( {boxValue, functionUp} ) => {
                     <input 
                         id="text"
                         type="text"
-                        placeholder="name/grado"
+                        placeholder="nombre/grado"
                         name="boxSearch"
                         value={boxValue}
                         onChange={functionUp}

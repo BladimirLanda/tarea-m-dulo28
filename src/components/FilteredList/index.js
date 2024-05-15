@@ -9,26 +9,8 @@ const FilteredList = ( { list, search } ) => {
                 {
                     list.map(alumno => {
                         const {id, name, grado} = alumno;
-                        const boxElement = document.getElementById("text").value;
-                        if (boxElement == "name") {
-                            return (
-                                <article key={id}>
-                                    <ul>
-                                        <li>El nombre del alumno es: {name} --- {search}</li>
-                                    </ul>
-                                </article>
-                            )
-                        }
-                        else if (boxElement == "grado") {
-                            return (
-                                <article key={id}>
-                                    <ul>
-                                        <li>Los grados de los alumnos son: {grado} --- {search}</li>
-                                    </ul>
-                                </article>
-                            )
-                        }
-                        else {
+                        if (search == name) {
+                            console.log(search);
                             return (
                                 <article key={id}>
                                     <ul>
@@ -37,6 +19,50 @@ const FilteredList = ( { list, search } ) => {
                                     </ul>
                                 </article>
                             )
+                        }
+                        else if (search == grado) {
+                            console.log(search);
+                            return (
+                                <article key={id}>
+                                    <ul>
+                                        <li>El nombre del alumno es: {name}</li>
+                                        <li>El grado del alumno es: {grado}</li>
+                                    </ul>
+                                </article>
+                            )
+                        }
+                        else if (search == "nombre") {
+                            console.log(search);
+                            return (
+                                <article key={id}>
+                                    <ul>
+                                        <li>El nombre del alumno es: {name}</li>
+                                    </ul>
+                                </article>
+                            )
+                        }
+                        else if (search == "grado") {
+                            console.log(search);
+                            return (
+                                <article key={id}>
+                                    <ul>
+                                        <li>El grado del alumno es: {grado}</li>
+                                    </ul>
+                                </article>
+                            )
+                        }
+                        else if (search == "") {
+                            return (
+                                <article key={id}>
+                                    <ul>
+                                        <li>El nombre del alumno es: {name}</li>
+                                        <li>El grado del alumno es: {grado}</li>
+                                    </ul>
+                                </article>
+                            )
+                        }
+                        else {
+                            console.log("No definido");
                         }
                     })
                 }
